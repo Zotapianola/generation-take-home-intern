@@ -1,3 +1,14 @@
 .App {
   margin: 15px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mapParent {
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100;
 }

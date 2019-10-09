@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Hi, Welcome to the Digital Generation Code Challenge!</h1>
+      <h1>Hi, Welcome to the Digital Generation Code Challenge!</h1>
         <h3>Intro:</h3>
 
         <p>At Generation, we have many users: students, teachers, employers, and the core Generation team.</p>
@@ -45,3 +45,9 @@ class App extends Component {
 }
 
 export default App;
+
+/* 
+
+
+
+*/
