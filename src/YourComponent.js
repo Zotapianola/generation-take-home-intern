@@ -34,7 +34,7 @@ class YourComponent extends Component {
         />
         <Marker position={position} icon={markIcon}>
           <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
+            Aquí está <br /> CDMX
           </Popup>
         </Marker>
       </Map>
