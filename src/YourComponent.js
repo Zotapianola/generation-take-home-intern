@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import 'leaflet/dist/leaflet.css';
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
+import  directory from '../src/store_directory.json';
+import uuid from 'uuid';
 
 // obtiene ícono de marcador y determina sus propiedades
 let markIcon = L.icon({
@@ -19,7 +21,9 @@ class YourComponent extends Component {
       lat: 19.4326,
       lng: -99.1332
     },
-    zoom: 17
+    zoom: 9,
+    // mapea coordenadas desde JSON
+    directory: directory.map(c=>c.Coordinates)
   }
 
   render() {
@@ -32,11 +36,21 @@ class YourComponent extends Component {
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position} icon={markIcon}>
+        {/* <Marker position={position} onClick={()=>{console.log(this.state.directory)}} icon={markIcon}>
           <Popup>
             Aquí está <br /> CDMX
           </Popup>
-        </Marker>
+        </Marker> */}
+        {this.state.directory.map((newMarker) => (
+            <Marker
+              key={`mark${uuid.v4()}`}
+              position={[newMarker.lat, newMarker.lng]}
+              icon={markIcon}>
+              <Popup>
+              Aquí está <br /> tu marcador
+              </Popup>
+            </Marker>
+          ))}
       </Map>
       </div>
     );
