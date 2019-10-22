@@ -1,14 +1,30 @@
 .App {
-  margin: 15px;
+  margin: 0px;
+  padding: 0px;
   width: 100vw;
   height: 100vh;
 }
 
-.mapParent {
+.instructions {
+  padding: 10px;
+}
+
+.mapGrandParent {
   height: 100%;
+}
+
+.mapParent {
+  background: #333;
+  height: 92%;
+  padding: 10px;
 }
 
 .map {
   height: 100%;
   width: 100;
+}
+
+.menuCard {
+  width: 50%;
+  z-index: 1000;
 }
