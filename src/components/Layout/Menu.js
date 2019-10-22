@@ -1,9 +1,12 @@
 import React, { Fragment, Component } from 'react';
 import { Card, Button, ButtonToolbar, ButtonGroup, CardTitle, CardText } from 'reactstrap';
 
+// ícono para botones de tienda
+let storeIcon = <i className="fas fa-store"></i>;
+
 class Menu extends Component {
     state = {
-        color: null
+        color: ''
     }
 
     handleClick = (e) => {
@@ -11,6 +14,7 @@ class Menu extends Component {
     }
 
     render () {
+        const { color } = this.state.color;
         return (
             <Fragment>
                 <Card body className="menuCard">
@@ -18,10 +22,23 @@ class Menu extends Component {
                     <CardText>Marca tus tiendas favoritas con un color de tu preferencia.</CardText>
                         <ButtonToolbar aria-label="Toolbar with button groups">
                             <ButtonGroup className="mr-2" aria-label="First group">
-                                <Button id="red" menu={this.state} onClick={this.handleClick} color="danger">*</Button>
-                                <Button id="green" menu={this.state} onClick={this.handleClick} color="success">*</Button>
-                                <Button id="yellow" menu={this.state} onClick={this.handleClick} color="warning">*</Button>
-                                <Button id="grey" menu={this.state} onClick={this.handleClick} color="secondary">*</Button>
+                                <Button 
+                                id="red" 
+                                userIcon={color} 
+                                onClick={this.handleClick} 
+                                color="danger">{storeIcon}</Button>
+                                <Button id="green" 
+                                userIcon={color} 
+                                onClick={this.handleClick} 
+                                color="success">{storeIcon}</Button>
+                                <Button id="yellow" 
+                                userIcon={color} 
+                                onClick={this.handleClick} 
+                                color="warning">{storeIcon}</Button>
+                                <Button id="grey" 
+                                userIcon={color} 
+                                onClick={this.handleClick} 
+                                color="secondary">{storeIcon}</Button>
                             </ButtonGroup>
                         </ButtonToolbar>
                 </Card>

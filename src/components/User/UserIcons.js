@@ -1,6 +1,5 @@
 import React from 'react';
 import L from 'leaflet';
-import Menu from '../Layout/Menu';
 
 // marcadores de tienda de usuario
 
@@ -25,7 +24,8 @@ let defaultColor = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAApCAYAAA
 let iconURL = defaultColor;
 
 
-const UserIcons = ()=> {
+const UserIcons = userIcon => {
+
     // switch(expression) {
     //     case x:
     //       // code block
