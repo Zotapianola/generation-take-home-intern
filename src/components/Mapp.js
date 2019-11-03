@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Map, TileLayer } from 'react-leaflet';
-import StoreMarkers from './Store/StoreMarkers';
 import Header from './Layout/Header';
+import StoreMarkers from './Store/StoreMarkers';
 import Menu from './Layout/Menu';
 import 'leaflet/dist/leaflet.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-class YourComponent extends Component {
+class Mapp extends Component {
   // establece estado inicial
   state = {
     location: {
@@ -16,13 +16,17 @@ class YourComponent extends Component {
     },
     // zoom inicial
     zoom: 9,
+    iconColor: ""
   }
+
+  // obtiene color seleccionado por usuario
+  getUserColor = userColor => this.setState({iconColor: userColor})
   
   render() {
     const { zoom, location } = this.state;
     // posición inicial de mapa
     const position = [location.lat, location.lng]
-    
+
     return (
       <div className="mapGrandParent" >
         <Header />
@@ -32,8 +36,8 @@ class YourComponent extends Component {
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Menu />
-            <StoreMarkers />
+            <Menu getColor={this.getUserColor}/>
+            <StoreMarkers iconColor={this.state.iconColor}/>
           </Map>
         </div>
       </div>
@@ -41,4 +45,4 @@ class YourComponent extends Component {
   }
 }
 
-export default YourComponent;
+export default Mapp;

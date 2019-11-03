@@ -28,3 +28,6 @@
   width: 18rem;
   z-index: 1000;
 }
+.storeBtn text{
+  pointer-events: none;
+}

@@ -1,20 +1,16 @@
 import React, { Fragment, Component } from 'react';
+import PropTypes from 'prop-types';
 import { Card, Button, ButtonToolbar, ButtonGroup, CardTitle, CardText } from 'reactstrap';
+
 
 // ícono para botones de tienda
 let storeIcon = <i className="fas fa-store"></i>;
 
 class Menu extends Component {
-    state = {
-        color: ''
-    }
 
-    handleClick = (e) => {
-        this.setState({color: e.target.id})
-    }
+    handleClick = e => this.props.getColor(e.currentTarget.id);
 
     render () {
-        // const { color } = this.state;
         return (
             <Fragment>
                 <Card body className="float-right menuCard">
@@ -22,17 +18,18 @@ class Menu extends Component {
                     <CardText>Marca tus tiendas favoritas con un color de tu preferencia.</CardText>
                         <ButtonToolbar aria-label="Toolbar with button groups">
                             <ButtonGroup className="mr-2" aria-label="First group">
-                                <Button 
+                                <Button className="storeBtn"
                                 id="red" 
                                 onClick={this.handleClick} 
-                                color="danger">{storeIcon}</Button>
-                                <Button id="green" 
+                                color="danger">{storeIcon}
+                                </Button>
+                                <Button className="storeBtn" id="green" 
                                 onClick={this.handleClick} 
                                 color="success">{storeIcon}</Button>
-                                <Button id="yellow" 
+                                <Button className="storeBtn" id="yellow" 
                                 onClick={this.handleClick} 
                                 color="warning">{storeIcon}</Button>
-                                <Button id="grey" 
+                                <Button className="storeBtn" id="grey" 
                                 onClick={this.handleClick} 
                                 color="secondary">{storeIcon}</Button>
                             </ButtonGroup>
@@ -41,6 +38,10 @@ class Menu extends Component {
             </Fragment>
         )
     }
+}
+
+Menu.PropTypes = {
+    getColor: PropTypes.func.isRequired
 }
 
 export default Menu;
