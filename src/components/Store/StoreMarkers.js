@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import uuid from 'uuid';
 import directory from './store_directory.json';
 import { Marker, Popup } from 'react-leaflet';
@@ -14,14 +15,14 @@ let userIcon = L.icon({
 
 class StoreMarkers extends Component {
   state = {
-    userStores: [],
+    userStores: []
   }
 
   addUserStore = (e) => {
     // guarda posición de marcador cliqueado
     let markerPosition = e.target.options.position;
     // agrega posición cliqueada a array de posiciones
-    this.setState({ userStores: [...this.state.userStores, markerPosition]});
+    this.setState({ userStores: [...this.state.userStores, markerPosition] });
     console.log(this.state);
     // si cualquier elemento del array resultante está contenido en el original, cambia ícono
     // renderear lista de usuarios en UserStores en un card (instalé bootstrap y reacstrap)
@@ -56,6 +57,10 @@ Marker.defaultProps = {
     iconAnchor: [12.5, 41],
     popupAnchor: [0, -41],
     })
+}
+
+StoreMarkers.propTypes = {
+  iconColor: PropTypes.string.isRequired
 }
 
 export default StoreMarkers;

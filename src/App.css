@@ -28,6 +28,10 @@
   width: 18rem;
   z-index: 1000;
 }
-.storeBtn text{
+.storeBtn text {
   pointer-events: none;
+}
+
+.mr-2 {
+  margin: 0px !important;
 }

@@ -16,28 +16,28 @@ class Mapp extends Component {
     },
     // zoom inicial
     zoom: 9,
-    iconColor: ""
-  }
+    iconColor: ''
+  };
 
-  // obtiene color seleccionado por usuario
-  getUserColor = userColor => this.setState({iconColor: userColor})
-  
+  // obtiene color seleccionado por usuario en Menu
+  getUserColor = userColor => this.setState({ iconColor: userColor });
+
   render() {
-    const { zoom, location } = this.state;
+    const { zoom, location, iconColor } = this.state;
     // posición inicial de mapa
-    const position = [location.lat, location.lng]
+    const position = [location.lat, location.lng];
 
     return (
-      <div className="mapGrandParent" >
+      <div className="mapGrandParent">
         <Header />
-        <div className="mapParent" >
+        <div className="mapParent">
           <Map className="map" center={position} zoom={zoom}>
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Menu getColor={this.getUserColor}/>
-            <StoreMarkers iconColor={this.state.iconColor}/>
+            <Menu getColor={this.getUserColor} />
+            <StoreMarkers iconColor={iconColor} />
           </Map>
         </div>
       </div>
