@@ -30,21 +30,25 @@ class Mapp extends Component {
 
     return (
       <Router>
-        <Route exact path="/">
-          <div className="mapGrandParent">
-            <Header />
-            <div className="mapParent">
-              <Map className="map" center={position} zoom={zoom}>
-                <TileLayer
-                  attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Menu getColor={this.getUserColor} />
-                <StoreMarkers iconColor={iconColor} />
-              </Map>
+        <Route
+          exact
+          path="/"
+          render={props => (
+            <div className="mapGrandParent">
+              <Header />
+              <div className="mapParent">
+                <Map className="map" center={position} zoom={zoom}>
+                  <TileLayer
+                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                  />
+                  <Menu getColor={this.getUserColor} />
+                  <StoreMarkers iconColor={iconColor} />
+                </Map>
+              </div>
             </div>
-          </div>
-        </Route>
+          )}
+        ></Route>
       </Router>
     );
   }
