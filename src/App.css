@@ -32,6 +32,13 @@
   pointer-events: none;
 }
 
-.mr-2 {
-  margin: 0px !important;
+.userStoreCard {
+  padding: 2px;
+  width: 180px;
+}
+
+.userStoreList {
+  list-style-type: none;
+  padding: 0px !important;
+  margin-bottom: 0px;
 }

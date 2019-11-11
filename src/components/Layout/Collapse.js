@@ -1,5 +1,5 @@
 import React from 'react';
-import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
+import { UncontrolledCollapse, Button, Card } from 'reactstrap';
 
 const Collapsable = () => {
   return (
@@ -19,13 +19,16 @@ const Collapsable = () => {
         ></i>
       </Button>
       <UncontrolledCollapse toggler="#toggler">
-        <Card>
-          <CardBody>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-            magni, voluptas debitis similique porro a molestias consequuntur
-            earum odio officiis natus, amet hic, iste sed dignissimos esse fuga!
-            Minus, alias.
-          </CardBody>
+        <Card className="userStoreCard">
+          <ul className="userStoreList list-group">
+            <li className="list-group-item-success">
+              Red Barn Stores 3858-CUAJIMALPA
+            </li>
+            <li className="list-group-item-secondary">
+              Red Barn Stores 1770-PATIO SANTA FE
+            </li>
+            <li className="list-group-item-warning">KAYCHEE 154-Xochimilco</li>
+          </ul>
         </Card>
       </UncontrolledCollapse>
     </React.Fragment>
