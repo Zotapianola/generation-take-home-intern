@@ -37,8 +37,14 @@
   width: 180px;
 }
 
-.userStoreList {
-  list-style-type: none;
-  padding: 0px !important;
-  margin-bottom: 0px;
+#toggler {
+  padding: 0px;
+  width: 178px;
+  height: 30px;
+}
+
+#collapse-icon {
+  width: 178px;
+  display: flex;
+  justify-content: center;
 }
