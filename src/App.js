@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Mapp from './components/Mapp';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -38,7 +39,9 @@ class App extends Component {
           <li>That said, code that is easy to follow is always appreciated :)</li>
         </ul>
         </div> */}
-        <Mapp />
+        <Router>
+          <Route exact path="/" render={props => <Mapp />}></Route>
+        </Router>
       </div>
     );
   }
