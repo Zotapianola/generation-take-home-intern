@@ -6,8 +6,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        {/* <div className="instructions">
+      <Router>
+        <Route exact path="/">
+          <div className="App">
+            {/* <div className="instructions">
         <h1>Hi, Welcome to the Digital Generation Code Challenge!</h1>
         <h3>Intro:</h3>
 
@@ -39,10 +41,10 @@ class App extends Component {
           <li>That said, code that is easy to follow is always appreciated :)</li>
         </ul>
         </div> */}
-        <Router>
-          <Route exact path="/" render={props => <Mapp />}></Route>
-        </Router>
-      </div>
+            <Mapp />
+          </div>
+        </Route>
+      </Router>
     );
   }
 }
