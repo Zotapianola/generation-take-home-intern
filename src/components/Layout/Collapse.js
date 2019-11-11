@@ -7,6 +7,7 @@ const TableHeader = () => {
       <tr>
         <th>#</th>
         <th>Name</th>
+        <th></th>
       </tr>
     </thead>
   );
@@ -17,17 +18,24 @@ const TableBody = () => {
     <tbody>
       <tr>
         <td>1</td>
-        <td>My Store 1</td>
+        <td style={{ backgroundColor: '#C82232', color: 'white' }}>
+          Tienda importante
+        </td>
         <td>X</td>
       </tr>
       <tr>
         <td>2</td>
-        <td>My Store 2</td>
+        <td>Tienda cercana al cole</td>
         <td>X</td>
       </tr>
       <tr>
         <td>3</td>
-        <td>My Store 3</td>
+        <td>Artículos específicos</td>
+        <td>X</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Tienda importante</td>
         <td>X</td>
       </tr>
     </tbody>

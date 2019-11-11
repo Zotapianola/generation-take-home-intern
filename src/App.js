@@ -6,7 +6,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="instructions">
+        {/* <div className="instructions">
         <h1>Hi, Welcome to the Digital Generation Code Challenge!</h1>
         <h3>Intro:</h3>
 
@@ -37,7 +37,7 @@ class App extends Component {
           <li><b>Focus on the user, not the technology.</b> A simple implementation that impresses the user is better than a super technical solution that impresses other developers.</li>
           <li>That said, code that is easy to follow is always appreciated :)</li>
         </ul>
-        </div>
+        </div> */}
         <Mapp />
       </div>
     );
