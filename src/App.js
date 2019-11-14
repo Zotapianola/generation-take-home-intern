@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import './App.css';
-import Mapp from './components/Mapp';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { Component } from "react";
+import "./App.css";
+import Mapp from "./components/Mapp";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
   render() {

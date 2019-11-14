@@ -5,6 +5,7 @@
   "homepage": "https://zotapianola.github.io/generation-take-home-intern",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.1.1",
     "leaflet": "^1.5.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.2",
@@ -16,6 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
