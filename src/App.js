@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history} basename={process.env.PUBLIC_URL}>
         <Route exact path="/">
           <div className="App">
             {/* <div className="instructions">
