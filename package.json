@@ -2,6 +2,7 @@
   "name": "generation-take-home-intern",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://zotapianola.github.io/generation-take-home-intern",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "leaflet": "^1.5.1",

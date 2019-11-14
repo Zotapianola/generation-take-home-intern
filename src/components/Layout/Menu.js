@@ -1,5 +1,5 @@
-import React, { Fragment, Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment, Component } from "react";
+import PropTypes from "prop-types";
 import {
   Card,
   Button,
@@ -7,8 +7,8 @@ import {
   ButtonGroup,
   CardTitle,
   CardText
-} from 'reactstrap';
-import Collapsable from '../Layout/Collapse';
+} from "reactstrap";
+import Collapsable from "../Layout/Collapse";
 
 // ícono para botones de tienda
 let storeIcon = <i className="fas fa-store"></i>;
@@ -21,17 +21,17 @@ class Menu extends Component {
     return (
       <Fragment>
         <Card body className="float-right menuCard">
-          <CardTitle style={{ padding: '10px', margin: '0px' }}>
-            <h2 style={{ margin: '0px' }}>¡Bienvenide!</h2>
+          <CardTitle style={{ padding: "10px", margin: "0px" }}>
+            <h2 style={{ margin: "0px" }}>¡Bienvenide!</h2>
           </CardTitle>
-          <CardText style={{ padding: '10px', margin: '0px' }}>
+          <CardText style={{ padding: "10px", margin: "0px" }}>
             Marca tus tiendas favoritas con un color de tu preferencia.
           </CardText>
           <ButtonToolbar
             aria-label="Toolbar with button groups"
             style={{
-              display: 'flex',
-              justifyContent: 'center'
+              display: "flex",
+              justifyContent: "center"
             }}
           >
             <ButtonGroup aria-label="First group">
